@@ -1,17 +1,217 @@
-$main-color: yellow;
-$secondary-color: red;
+@import "variables";
+@import "mixins";
+@import "common";
+@import "fonts";
 
-body {
-  background-color: $main-color;
-  color: $secondary-color;
+//......................................... about_page start...............................................\\
+.about-first {
+  &__container {
+    gap: 30px;
+    @media (min-width: $tabletHD) {
+      flex-direction: row;
+    }
 
-  @media (min-width: 768px) {
-    font-size: 18px;
+    &.container {
+      @media (min-width: $tablet) {
+        padding: 0 60px;
+      }
+      @media (min-width: $decktop) {
+        padding: 0 180px;
+      }
+      @media (min-width: $decktopHD) {
+        padding: 0 280px;
+      }
+    }
+  }
+  &__text {
+    width: 100%;
+    max-width: 315px;
+
+    @media (min-width: $tablet) {
+      max-width: 648px;
+    }
+    @media (min-width: $tabletHD) {
+      max-width: 486px;
+    }
+    @media (min-width: $decktop) {
+      max-width: 662px;
+    }
+    @media (min-width: $decktopHD) {
+      max-width: 942px;
+    }
+  }
+  &__title {
+    padding-bottom: 8px;
+    font-size: 30px;
+    @media (min-width: $tablet) {
+      @include font-props(700, 38px, 100%, 0%);
+    }
+  }
+  &__number {
+    @include font-props(700, 36px, 100%, 0%);
+  }
+  &__stats {
+    gap: 40px;
+    border-left: 4px solid $separator-color;
+    padding-left: 30px;
+    width: 100%;
+    max-width: 315px;
+    height: fit-content;
+
+    @media (min-width: $tablet) {
+      max-width: 614px;
+    }
+    @media (min-width: $tabletHD) {
+      max-width: 388px;
+    }
+  }
+  &__stat {
+    gap: 10px;
+  }
+  &__stat-top {
+    gap: 8px;
+  }
+  &__paragraph {
+    margin-top: 20px;
+    @include font-props(400, 19px, 30px, 0%);
+  }
+  &__icon {
+    width: 100%;
+    max-width: 32px;
+  }
+  &__stat-text {
+    color: $main-color;
   }
 }
+.about-img {
+  &__container {
+    padding: 60px 0;
+  }
+  &__picture {
+    width: 100%;
+  }
+  &__text {
+    @include font-props(700, 36px, 100%, 13px);
+    text-transform: uppercase;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 15px 30px #282856cc;
 
-@media (min-width: 768px) {
-  main {
-    font-size: 16px;
+    @media (min-width: $tablet) {
+      @include font-props(700, 46px, 100%, 63px);
+    }
+    @media (min-width: $tabletHD) {
+      @include font-props(700, 86px, 100%, 63px);
+    }
+    @media (min-width: $decktop) {
+      @include font-props(700, 96px, 100%, 63px);
+    }
+  }
+}
+.about-third {
+  &__container {
+    gap: 30px;
+    margin-bottom: 60px;
+
+    @media (min-width: $tabletHD) {
+      flex-direction: row;
+      gap: 60px;
+    }
+
+    &.container {
+      @media (min-width: $tablet) {
+        padding: 0 60px;
+      }
+      @media (min-width: $decktop) {
+        padding: 0 180px;
+      }
+      @media (min-width: $decktopHD) {
+        padding: 0 280px;
+      }
+    }
+  }
+  &__text {
+    width: 100%;
+    max-width: 315px;
+    gap: 20px;
+
+    @media (min-width: $tablet) {
+      max-width: 648px;
+    }
+    @media (min-width: $tabletHD) {
+      max-width: 482px;
+    }
+    @media (min-width: $decktop) {
+      max-width: 658px;
+    }
+    @media (min-width: $decktopHD) {
+      max-width: 938px;
+    }
+  }
+  &__paragraph {
+    @include font-props(400, 19px, 30px, 0%);
+  }
+  &__title {
+    width: 100%;
+    max-width: 315px;
+
+    @media (min-width: $tablet) {
+      max-width: 648px;
+    }
+    @media (min-width: $tabletHD) {
+      max-width: 362px;
+    }
+  }
+}
+.about-fourth {
+  background-color: $background-color;
+  padding: 30px 60px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__images {
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+  }
+  &__div {
+    width: 100%;
+    max-width: 255px;
+    background-color: $white;
+    border-radius: 12px;
+    padding: 25px 0;
+
+    @media (min-width: $tablet) {
+      max-width: 132px;
+    }
+    @media (min-width: $tabletHD) {
+      max-width: 196px;
+    }
+    @media (min-width: $decktop) {
+      max-width: 300px;
+    }
+    @media (min-width: $decktopHD) {
+      max-width: 370px;
+    }
+  }
+  &__img {
+    width: 100%;
+    @media (min-width: $tablet) {
+      max-width: 106px;
+    }
+    @media (min-width: $tabletHD) {
+      max-width: 159px;
+    }
+  }
+  &__img-f {
+    @media (min-width: $tablet) {
+      max-width: 53px;
+    }
+    @media (min-width: $tabletHD) {
+      max-width: 80px;
+    }
   }
 }
