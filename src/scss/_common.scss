@@ -20,6 +20,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+img {
+  max-width: 100%;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
 main {
   flex-grow: 1;
 }
@@ -69,4 +76,13 @@ p {
 }
 .center {
   text-align: center;
+}
+.between {
+  justify-content: space-between;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.transition {
+  transition: all 0.2s linear;
 }

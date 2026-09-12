@@ -1,0 +1,64 @@
+.header {
+  margin-bottom: 30px;
+
+  &__container {
+    &.container {
+      padding: 0 0;
+    }
+  }
+  &__contacts {
+    padding: 10px 15px;
+    background-color: $background-color;
+  }
+  &__tel {
+    @include font-props(700, 16px, 100%, 0%);
+    color: $text-color;
+  }
+  &__main {
+    padding: 0 15px;
+  }
+  &__logo {
+    padding: 15px 0 10px 0;
+    gap: 4px;
+  }
+  &__logo-img {
+    max-width: 70px;
+  }
+  &__slash {
+    max-width: 12px;
+    height: 26px;
+  }
+  &__burger {
+    width: 32px;
+    height: fit-content;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 7px;
+    margin: 13px 0;
+    gap: 6px;
+
+    &:active {
+      background-color: $separator-color;
+    }
+  }
+  &__line {
+    width: 18px;
+    padding: 1px 0;
+    background-color: $main-color;
+  }
+  &__dot {
+    display: none;
+  }
+  &__icon {
+    display: none;
+  }
+  &__address {
+    display: none;
+  }
+  &__menu {
+    display: none;
+  }
+  &__page {
+    display: none;
+  }
+}
