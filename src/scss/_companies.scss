@@ -1,0 +1,74 @@
+.companies {
+  padding-top: 60px;
+  align-items: center;
+
+  @media (min-width: $decktopHD) {
+    padding-bottom: 60px;
+  }
+
+  &__cards {
+    width: 100%;
+    max-width: 1720px;
+    max-height: calc(120px * 6);
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: $tabletHD) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (min-width: $decktopHD) {
+      border-radius: 12px;
+    }
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+  }
+
+  &__card_1 {
+    background-color: #1c4280;
+  }
+  &__card_2 {
+    background-color: #143646;
+  }
+  &__card_3,
+  &__card_5 {
+    background-color: #f48b30;
+  }
+  &__card_4 {
+    background-color: #9e4dc3;
+  }
+  &__card_6 {
+    background-color: #e2e2e4;
+  }
+  &__card_7 {
+    background-color: #c71c36;
+  }
+  &__card_8 {
+    background-color: #dcf3f9;
+  }
+  &__card_9 {
+    background-color: #eaeaea;
+  }
+  &__card_10 {
+    background-color: #282240;
+  }
+  &__card_11 {
+    background-color: #1d4568;
+  }
+  &__card_12 {
+    background-color: $black;
+  }
+  &__img {
+    padding: 10px;
+  }
+}

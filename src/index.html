@@ -1,9 +1,294 @@
 <!doctype html>
 <html lang="en">
-  @@include('html/head.html', { "title": "Main page" })
+  @@include('html/head.html', { "title": "Hlegal" })
   <body>
-    @@include('html/header.html')
-    <main></main>
-    @@include('html/footer.html')
+    @@include('html/header.html', { "pageTitle": false, "headerClass":
+    "absolute", "logoSrc": "Logo-white.svg", "theme": "header--dark" })
+    <main>
+      <div class="gradient relative">
+        <section class="main center relative">
+          <div class="container main__container">
+            <div class="main__content flex column between">
+              <span class="main__span"></span>
+              <h1 class="main__title hero">you legal solutions provider</h1>
+              <a class="main__link" href="#">
+                <svg
+                  width="42"
+                  height="42"
+                  viewBox="0 0 42 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_22728_12366)">
+                    <circle
+                      opacity="0.5"
+                      cx="21"
+                      cy="21"
+                      r="20"
+                      stroke="white"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 18L21 27L30 18"
+                      stroke="white"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_22728_12366">
+                      <rect width="42" height="42" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="values">
+          <div class="container values__container flex column gap">
+            <input
+              class="values__radio"
+              type="radio"
+              name="values"
+              id="values-consistent"
+              checked
+            />
+            <input
+              class="values__radio"
+              type="radio"
+              name="values"
+              id="values-customer"
+            />
+            <input
+              class="values__radio"
+              type="radio"
+              name="values"
+              id="values-innovative"
+            />
+            <input
+              class="values__radio"
+              type="radio"
+              name="values"
+              id="values-business"
+            />
+            <div class="values__tabs flex row gap">
+              <label
+                class="values__tab transition checked"
+                for="values-consistent"
+              >
+                Consistent
+              </label>
+              <label class="values__tab transition" for="values-customer">
+                Customer oriented
+              </label>
+              <label class="values__tab transition" for="values-innovative">
+                Innovative
+              </label>
+              <label class="values__tab transition" for="values-business">
+                Business oriented
+              </label>
+            </div>
+            <div class="values__content">
+              <div
+                class="values__item values__item--consistent flex column gap"
+              >
+                <h2 class="values__title">
+                  We turn the idea of legal services
+                </h2>
+                <p class="values__text">
+                  Consolidating many years of experience and practice, the
+                  company's lawyers accompany complex projects and achieve a
+                  number of important decisions for the industry. Many of them
+                  form the practice of applying the law of the sea in Ukraine.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="services">
+          <div class="container--wide third__container--wide">
+            <div class="services__name flex row">
+              <a
+                class="services__title uppercase hover hover_svg"
+                href="./services_page.html"
+                >Services</a
+              >
+              <svg
+                width="7"
+                height="11"
+                viewBox="0 0 7 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.707031 0.707031L5.20703 5.20703L0.707031 9.70703"
+                  stroke="#24A3FF"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            @@include('html/service.html')
+          </div>
+        </section>
+      </div>
+      <section class="team-slider">
+        <div class="container--wide team-slider__container--wide">
+          <div class="team-slider__div" id="mySlider-1">
+            <div class="team-slider__card">
+              <div class="team-slider__photo">
+                <img
+                  class="team-slider__img"
+                  src="./files/images/Team-1.jpg"
+                  alt="Person"
+                />
+              </div>
+              <div class="team-slider__text flex column gap">
+                <div class="team-slider--top flex column">
+                  <div class="team-slider__item flex row">
+                    <a class="team-slider__link caps hover hover_svg" href="#"
+                      >команда</a
+                    >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 7 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.707031 0.707031L5.20703 5.20703L0.707031 9.70703"
+                        stroke="#24A3FF"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="team-slider__paragraph text-gradient">
+                    Ми звикли брати на себе відповідальність та завжди
+                    гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли
+                    більшість безсилі.
+                  </h2>
+                </div>
+                <div class="team-slider__person flex column">
+                  <h4 class="team-slider__name">Олександр Олександровський</h4>
+                  <p class="team-slider__position">Керуючий партнер</p>
+                </div>
+              </div>
+            </div>
+            <div class="team-slider__card">
+              <div class="team-slider__photo">
+                <img
+                  class="team-slider__img"
+                  src="./files/images/Team-5.jpg"
+                  alt="Person"
+                />
+              </div>
+              <div class="team-slider__text flex column gap">
+                <div class="team-slider--top flex column">
+                  <div class="team-slider__item flex row">
+                    <a class="team-slider__link caps hover hover_svg" href="#"
+                      >команда</a
+                    >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 7 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.707031 0.707031L5.20703 5.20703L0.707031 9.70703"
+                        stroke="#24A3FF"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="team-slider__paragraph text-gradient">
+                    Ми звикли брати на себе відповідальність та завжди
+                    гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли
+                    більшість безсилі.
+                  </h2>
+                </div>
+                <div class="team-slider__person flex column">
+                  <h4 class="team-slider__name">Оксана Кобзар</h4>
+                  <p class="team-slider__position">
+                    Партнер з акціонерного капіталу, адвокат
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="team-slider__card">
+              <div class="team-slider__photo">
+                <img
+                  class="team-slider__img"
+                  src="./files/images/Team-3.jpg"
+                  alt="Person"
+                />
+              </div>
+              <div class="team-slider__text flex column gap">
+                <div class="team-slider--top flex column">
+                  <div class="team-slider__item flex row">
+                    <a class="team-slider__link caps hover hover_svg" href="#"
+                      >команда</a
+                    >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 7 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.707031 0.707031L5.20703 5.20703L0.707031 9.70703"
+                        stroke="#24A3FF"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="team-slider__paragraph text-gradient">
+                    Ми звикли брати на себе відповідальність та завжди
+                    гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли
+                    більшість безсилі.
+                  </h2>
+                </div>
+                <div class="team-slider__person flex column">
+                  <h4 class="team-slider__name">Владислав Мельник</h4>
+                  <p class="team-slider__position">Молодший спеціаліст</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/companies.html') @@include('html/publications.html', {
+      "pageTitle": "We have something to tell" })
+    </main>
+    @@include('html/footer.html', { "showLine": true })
+
+    <div class="modal">
+      <div class="modal__window relative flex column gap">
+        <span class="modal__close absolute">&times;</span>
+        <h2 class="modal__title text-gradient">We would like to help you</h2>
+        <form class="modal__form modal__form--name flex column">
+          <input class="modal__input" type="text" placeholder="Name" />
+          <input
+            class="modal__input modal__input--message"
+            type="text"
+            placeholder="Message"
+          />
+        </form>
+        <div class="modal__contact flex column">
+          <h3 class="modal__contact-title caps">How to answer you?</h3>
+          <form class="modal__form modal__form--contact flex column">
+            <input class="modal__input" type="tel" placeholder="Phone number" />
+            <input class="modal__input" type="email" placeholder="Email" />
+          </form>
+        </div>
+        <button class="modal__button" type="submit">Send message</button>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./files/assets/slick/slick.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

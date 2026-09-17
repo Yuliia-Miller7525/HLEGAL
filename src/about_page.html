@@ -2,10 +2,11 @@
 <html lang="en">
   @@include('html/head.html', { "title": "About Page" })
   <body>
-    @@include('html/header.html')
+    @@include('html/header.html', { "pageTitle": "about us", "headerClass": "",
+    "logoSrc": "Logo-dark.svg", "theme": "header--light"})
     <main>
       <section class="about-first">
-        <div class="container about-first__container flex column">
+        <div class="container about-first__container flex column gap">
           <div class="about-first__text">
             <h1 class="about-first__title text-gradient hero">
               We turn over the idea of legal services
@@ -66,18 +67,16 @@
           </div>
         </div>
       </section>
-      <section class="about-img">
-        <div class="container about-img__container relative">
-          <img
-            class="about-img__picture"
-            src="./files/images/Team.png"
-            alt="Team"
-          />
-          <p class="about-img__text absolute uppercase">Team</p>
-        </div>
+      <section class="about-img relative">
+        <img
+          class="about-img__picture"
+          src="./files/images/Team.png"
+          alt="Team"
+        />
+        <p class="about-img__text absolute uppercase">Team</p>
       </section>
       <section class="about-third">
-        <div class="container about-third__container flex column">
+        <div class="container about-third__container flex column gap">
           <div class="about-third__text flex column">
             <p class="about-third__paragraph">
               The historically unchanged legal profession has begun to reformat
@@ -102,40 +101,42 @@
         </div>
       </section>
       <section class="about-fourth">
-        <h3 class="about-fourth__title caps center">achievements</h3>
-        <div class="about-fourth__images flex">
-          <div class="about-fourth__div center">
-            <img
-              class="about-fourth__img about-fourth__img-f"
-              src="./files/images/Achievment-1.png"
-              alt="Achievement"
-            />
+        <div class="container--wide about-fourth__container--wide">
+          <h3 class="about-fourth__title caps center">achievements</h3>
+          <div class="about-fourth__images flex">
+            <div class="about-fourth__div center">
+              <img
+                class="about-fourth__img about-fourth__img-f"
+                src="./files/images/Achievment-1.png"
+                alt="Achievement"
+              />
+            </div>
+            <div class="about-fourth__div center">
+              <img
+                class="about-fourth__img"
+                src="./files/images/Achievment-2.png"
+                alt="Achievement"
+              />
+            </div>
+            <div class="about-fourth__div center">
+              <img
+                class="about-fourth__img"
+                src="./files/images/Achievment-3.png"
+                alt="Achievement"
+              />
+            </div>
+            <div class="about-fourth__div center">
+              <img
+                class="about-fourth__img"
+                src="./files/images/Achievment-4.png"
+                alt="Achievement"
+              />
+            </div>
           </div>
-          <div class="about-fourth__div center">
-            <img
-              class="about-fourth__img"
-              src="./files/images/Achievment-2.png"
-              alt="Achievement"
-            />
-          </div>
-          <div class="about-fourth__div center">
-            <img
-              class="about-fourth__img"
-              src="./files/images/Achievment-3.png"
-              alt="Achievement"
-            />
-          </div>
-          <div class="about-fourth__div center">
-            <img
-              class="about-fourth__img"
-              src="./files/images/Achievment-4.png"
-              alt="Achievement"
-            />
-          </div>
+          <div class="about-fourth__slider"></div>
         </div>
-        <div class="about-fourth__slider"></div>
       </section>
     </main>
-    @@include('html/footer.html')
+    @@include('html/footer.html', { "showLine": true })
   </body>
 </html>

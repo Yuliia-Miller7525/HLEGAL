@@ -12,7 +12,12 @@ $separator-color: #e6e6f0;
 $gradient: linear-gradient (#323264, #323264, #a54b5f);
 $gradient-soft: linear-gradient (#323264, #323264, #7a425e);
 $gradient-red: linear-gradient (#f0145a, #693264);
-$gradient-supersoft: linear-gradient (#323264, #323264, #643e72);
+$gradient-supersoft: linear-gradient(
+  228.57deg,
+  #323264 11.93%,
+  #323264 57.17%,
+  #643e72 87.46%
+);
 $gradient-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
 $black: #000000;
 $white: #ffffff;

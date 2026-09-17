@@ -10,7 +10,6 @@ __MACOSX
 .vscode
 
 # Compiled output
-/dist
 /tmp
 
 # Logs

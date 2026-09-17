@@ -1,0 +1,44 @@
+.service {
+  @media (min-width: $tablet) {
+    gap: 60px;
+  }
+
+  &__title {
+    @media (min-width: $tablet) {
+      font-size: 38px;
+    }
+  }
+  &__content {
+    grid-template-rows: 6fr;
+    padding-bottom: 60px;
+
+    @media (min-width: $tablet) {
+      // grid-template-columns: repeat(2, 1fr);
+      // // gap: 60px;
+    }
+    @media (min-width: $tabletHD) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &__card {
+    gap: 30px;
+  }
+  &__img {
+    width: 100px;
+    max-width: 92px;
+    border-radius: 14px;
+    background-color: $white;
+  }
+  &__icon {
+    padding: 14px;
+  }
+  &__text {
+    gap: 15px;
+  }
+  &__link {
+    @include font-props(700, 22px, 100%, 0%);
+  }
+  &__description {
+    color: $white;
+  }
+}

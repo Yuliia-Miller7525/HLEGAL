@@ -1,11 +1,21 @@
 <footer class="footer">
-  <div class="container footer__container flex column">
+  <div class="container--wide footer__container--wide flex column">
+    @@if (showLine) {
     <div class="footer__line"></div>
-    <div class="footer__content flex column">
-      <div class="footer__information flex column">
-        <div class="footer__address flex column center">
-          <p class="footer__street-address">Kyiv, Mechnikova str, 14/1</p>
-          <a class="footer__link uppercase relative" href="#">On map</a>
+    }
+    <div class="footer__content flex column gap">
+      <div class="footer__content--information flex column">
+        <div class="footer__content--address flex column center">
+          <p class="footer__content--street-address">
+            Kyiv, Mechnikova str, 14/1
+          </p>
+          <a
+            class="footer__link uppercase relative hover"
+            href="https://maps.app.goo.gl/psoKaaZjyEBUAwzV9"
+            target="_blank"
+            rel="noopener noreferrer"
+            >On map</a
+          >
         </div>
         <div class="footer__contact flex column center">
           <a
@@ -28,11 +38,11 @@
               />
             </svg>
           </a>
-          <a class="footer__tel relative" href="tel:+380800211927"
+          <a class="footer__link--tel relative" href="tel:+380800211927"
             >0800 211 927</a
           >
           <a
-            class="footer__email transition relative"
+            class="footer__link--email transition relative hover"
             href="mailto:contact@forstudy.space"
             >contact@forstudy.space</a
           >

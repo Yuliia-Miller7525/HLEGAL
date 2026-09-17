@@ -1,7 +1,7 @@
-<header class="header">
-  <div class="container header__container flex column">
+<header class="header @@headerClass @@theme">
+  <div class="container--wide header__container--wide flex column">
     <div class="header__contacts flex between">
-      <div class="header__lang">
+      <div class="header__lang-switch">
         <form class="header__form">
           <label class="header__label">
             <input
@@ -10,16 +10,16 @@
               name="language"
               value="uk"
             />
-            <span class="header__span">UK</span>
+            <span class="header__span">УК</span>
           </label>
           <label class="header__label">
             <input
               class="header__input"
               type="radio"
               name="language"
-              value="ru"
+              value="sp"
             />
-            <span class="header__span">RU</span>
+            <span class="header__span">SP</span>
           </label>
           <label class="header__label">
             <input
@@ -27,48 +27,57 @@
               type="radio"
               name="language"
               value="en"
+              checked
             />
             <span class="header__span">EN</span>
           </label>
         </form>
       </div>
-      <span class="header__dot"></span>
-      <p class="header__address">Kyiv, Mechnikova str., 14/1</p>
-      <span class="header__dot"></span>
-      <a class="header__tel" href="tel:+380800211927">0800 211 927</a>
-      <span class="header__dot"></span>
-      <div class="header__icon">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"
-            fill="#B3B3BA"
-          />
-        </svg>
+      <p class="header__paragraph-address relative">
+        Kyiv, Mechnikova str., 14/1
+      </p>
+      <a class="header__link-tel relative" href="tel:+380800211927"
+        >0800 211 927</a
+      >
+      <div class="header__icon relative">
+        <a
+          class="header__link-fb"
+          href="https://www.facebook.com/"
+          target="blank"
+          rel="noreferrer noopener"
+          ><svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"
+              fill="#FFFFFF"
+            />
+          </svg>
+        </a>
       </div>
     </div>
-    <div class="header__main flex between">
-      <div class="header__logo flex">
+    <div class="header--main flex between">
+      <div class="header--main-left flex">
+        <div class="header__logo">
+          <a href="../index.html"
+            ><img
+              class="header__logo-img"
+              src="../files/images/@@logoSrc"
+              alt="Logo"
+          /></a>
+        </div>
+        @@if (pageTitle) {
         <img
-          class="header__logo-img"
-          src="../files/images/Logo.svg"
-          alt="Logo"
-        />
-        <img
-          class="header__slash"
+          class="header__divider"
           src="../files/images/Slash.svg"
           alt="Slash"
         />
-        <p class="header__page item_1">about us</p>
-        <p class="header__page item_2">services</p>
-        <p class="header__page item_3">team</p>
-        <p class="header__page item_4">publications</p>
-        <p class="header__page item_5">contact</p>
+        <h1 class="header__title">@@pageTitle</h1>
+        }
       </div>
       <div class="header__burger flex column">
         <span class="header__line"></span>
@@ -78,19 +87,23 @@
     </div>
     <div class="header__menu">
       <nav class="header__nav">
-        <ul class="header__list">
+        <ul class="header__list flex row">
           <li class="header__item">
-            <a href="../about_page.html">about us</a>
+            <a class="header__link" href="../about_page.html">about us</a>
           </li>
           <li class="header__item">
-            <a href="../services_page.html">services</a>
-          </li>
-          <li class="header__item"><a href="../team_page.html">team</a></li>
-          <li class="header__item">
-            <a href="../publications_page.html">publications</a>
+            <a class="header__link" href="../services_page.html">services</a>
           </li>
           <li class="header__item">
-            <a href="../contact_page.html">contact</a>
+            <a class="header__link" href="../team_page.html">team</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="../publications_page.html"
+              >publications</a
+            >
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="../contact_page.html">contact</a>
           </li>
         </ul>
       </nav>

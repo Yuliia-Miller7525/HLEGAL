@@ -1,0 +1,57 @@
+console.log("it works");
+
+// $("#mySlider-1").slick({
+//   dots: true,
+//   autoplay: true,
+//   infinite: true,
+// });
+
+function initFocusFix($slider) {
+  function fixSlickFocus() {
+    $slider.find(".slick-slide").each(function () {
+      var $slide = $(this);
+      var isHidden = $slide.attr("aria-hidden") === "true";
+
+      if (isHidden) {
+        $slide.find(":focus").blur();
+        $slide
+          .find("a, button, input, select, textarea, [tabindex]")
+          .each(function () {
+            if ($(this).data("orig-tabindex") === undefined) {
+              $(this).data("orig-tabindex", $(this).attr("tabindex") || "0");
+            }
+            $(this).attr("tabindex", "-1");
+          });
+      } else {
+        $slide
+          .find("a, button, input, select, textarea, [tabindex]")
+          .each(function () {
+            var orig = $(this).data("orig-tabindex");
+            $(this).attr("tabindex", orig === "0" ? null : orig);
+          });
+      }
+    });
+  }
+
+  fixSlickFocus();
+
+  $slider.on("beforeChange", function () {
+    $(document.activeElement).blur();
+  });
+
+  $slider.on("afterChange", function () {
+    fixSlickFocus();
+  });
+}
+
+var $slider1 = $("#mySlider-1");
+$slider1.slick({
+  dots: true,
+  autoplay: true,
+  infinite: true,
+});
+initFocusFix($slider1);
+
+// var $slider2 = $("#mySlider-2");
+// $slider2.slick({});
+// initFocusFix($slider2);

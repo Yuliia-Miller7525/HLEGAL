@@ -5,9 +5,30 @@
 }
 .container {
   width: 100%;
-  padding: 0 30px;
+  max-width: 1360px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $tablet) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  &--wide {
+    width: 100%;
+    max-width: 1600px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $tablet) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
 }
 html {
   font-family: Montserrat, sans-serif;
@@ -39,6 +60,9 @@ main {
 .column {
   flex-direction: column;
 }
+.row {
+  flex-direction: row;
+}
 .relative {
   position: relative;
 }
@@ -69,6 +93,9 @@ p {
   @include font-props(400, 16px, 26px, 0%);
   color: $black;
 }
+.p_small {
+  @include font-props(400, 14px, 22px, 0%);
+}
 .text-gradient {
   background: $gradient-text;
   color: transparent;
@@ -85,4 +112,47 @@ p {
 }
 .transition {
   transition: all 0.2s linear;
+}
+.gap {
+  gap: 30px;
+}
+.gradient {
+  background: $gradient-supersoft;
+  border-radius: 0 0 12px 12px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: calc(100% - (20px * 2));
+    height: 10px;
+    border-radius: 12px;
+    background-color: #cacadb;
+    position: absolute;
+    left: 20px;
+    bottom: -5px;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: calc(100% - (40px * 2));
+    height: 10px;
+    border-radius: 12px;
+    background-color: #e7e7f2;
+    position: absolute;
+    left: 40px;
+    bottom: -10px;
+    z-index: -2;
+  }
+}
+.hover {
+  color: $active-color;
+  &:hover {
+    color: $accent-color;
+  }
+}
+.hover_svg {
+  &:hover + svg path {
+    stroke: $accent-color;
+  }
 }

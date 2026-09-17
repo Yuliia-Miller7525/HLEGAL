@@ -1,0 +1,93 @@
+<section class="news">
+  <div class="container--wide news__container--wide flex column gap">
+    <div class="news--top flex column">
+      <div class="news__link flex row">
+        <a
+          class="news__name uppercase hover hover_svg caps"
+          href="../publications_page.html"
+          >Publications</a
+        >
+        <svg
+          width="7"
+          height="11"
+          viewBox="0 0 7 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.707031 0.707031L5.20703 5.20703L0.707031 9.70703"
+            stroke="#24A3FF"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+      @@if (pageTitle) {
+      <h2 class="news__title text-gradient">@@pageTitle</h2>
+      }
+    </div>
+    <div class="news__cards grid gap">
+      <div class="news__card">
+        <div class="news__photo">
+          <img
+            class="news__img"
+            src="../files/images/Publication-1.jpg"
+            alt="Publication"
+          />
+        </div>
+
+        <div class="news__description flex column">
+          <a class="news__description-link hover" href="#">Equity associate</a>
+          <p class="news__description-data uppercase">April 22</p>
+          <p class="news__description-paragraph p_small">
+            I'm a jun on projects. I am a co-owner of a law firm. How it
+            happened. Before entering my parents told me that if I…
+          </p>
+        </div>
+      </div>
+      <div class="news__card">
+        <div class="news__photo">
+          <img
+            class="news__img"
+            src="../files/images/Publication-2.png"
+            alt="Publication"
+          />
+        </div>
+
+        <div class="news__description flex column">
+          <a
+            class="news__description-link hover"
+            href="../publication_entry_page.html"
+            >Penalty for the Good Corporation: what will happen to Google and
+            others for violating the GDPR</a
+          >
+          <p class="news__description-data uppercase">September 29</p>
+          <p class="news__description-paragraph p_small">
+            And why the recovery of 50 million euros could be a fateful
+            precedent According to Mind.ua January 21 National Commission for
+            Data Protection.
+          </p>
+        </div>
+      </div>
+      <div class="news__card news__card--wide">
+        <div class="news__photo news__photo--wide">
+          <img
+            class="news__img"
+            src="../files/images/Publication-3.jpg"
+            alt="Publication"
+          />
+        </div>
+        <div class="news__description flex column">
+          <a class="news__description-link hover" href="#"
+            >Millennial Testament</a
+          >
+          <p class="news__description-data uppercase">August 19</p>
+          <p class="news__description-paragraph p_small">
+            What and how modern vloggers, opinion leaders and
+            crypto-millionaires will inherit A typical legacy of the Ukrainian
+            generation X looks like this: an apartment in…
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

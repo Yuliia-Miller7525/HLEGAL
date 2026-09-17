@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Services" })
+  <body>
+    @@include('html/header.html', { "pageTitle": "services", "headerClass":
+    "absolute", "logoSrc": "Logo-white.svg", "theme": "header--dark" })
+    <main>
+      <section class="services_top gradient relative">
+        <span class="services_top__span"></span>
+        <div class="container--wide services_top__container--wide">
+          @@include('html/service.html')
+        </div>
+      </section>
+      <section class="services_bottom">
+        @@include('html/companies.html')
+      </section>
+    </main>
+    @@include('html/footer.html', { "showLine": false})
+  </body>
+</html>

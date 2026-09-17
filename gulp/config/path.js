@@ -14,7 +14,7 @@ export const path = {
   src: {
     html: `${srcFolder}/*.html`,
     scss: `${srcFolder}/scss/style.scss`,
-    js: `${srcFolder}/js/app.js`,
+    js: `${srcFolder}/js/**/*.js`,
     files: `${srcFolder}/files/**/*.*`,
   },
   watch: {

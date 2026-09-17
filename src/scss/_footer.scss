@@ -1,20 +1,12 @@
 .footer {
   background-color: $background-color;
 
-  &__container {
-    &.container {
-      @media (min-width: $tablet) {
-        padding: 0 60px;
-      }
-    }
-  }
   &__line {
     width: 100%;
     padding: 1px 0;
     background-color: $separator-color;
   }
   &__content {
-    gap: 30px;
     padding: 30px 0;
 
     @media (min-width: $tablet) {
@@ -26,25 +18,25 @@
       padding: 30px 0;
     }
   }
-  &__information {
+  &__content--information {
     width: 100%;
   }
-  &__address {
+  &__content--address {
     gap: 10px;
     margin-bottom: 21px;
+    align-items: center;
 
     @media (min-width: $tablet) {
       flex-direction: row;
       gap: 26px;
     }
   }
-  &__street-address {
+  &__content--street-address {
     line-height: 100%;
     color: $main-color;
   }
   &__link {
     @include font-props(700, 12px, 100%, 1px);
-    color: $active-color;
 
     @media (min-width: $tablet) {
       &::before {
@@ -84,7 +76,7 @@
       margin-right: 0;
     }
   }
-  &__tel {
+  &__link--tel {
     @include font-props(700, 16px, 100%, 0%);
     color: $main-color;
     height: fit-content;
@@ -107,14 +99,9 @@
       }
     }
   }
-  &__email {
+  &__link--email {
     @include font-props(700, 16px, 100%, 0%);
-    color: $active-color;
     height: fit-content;
-
-    &:hover {
-      color: $accent-color;
-    }
 
     @media (min-width: $tablet) {
       padding-top: 11px;
