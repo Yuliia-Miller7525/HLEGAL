@@ -1,11 +1,5 @@
 console.log("it works");
 
-// $("#mySlider-1").slick({
-//   dots: true,
-//   autoplay: true,
-//   infinite: true,
-// });
-
 function initFocusFix($slider) {
   function fixSlickFocus() {
     $slider.find(".slick-slide").each(function () {
@@ -51,7 +45,3 @@ $slider1.slick({
   infinite: true,
 });
 initFocusFix($slider1);
-
-// var $slider2 = $("#mySlider-2");
-// $slider2.slick({});
-// initFocusFix($slider2);

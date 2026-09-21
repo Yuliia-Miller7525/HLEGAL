@@ -112,19 +112,28 @@
   background-color: $background-color;
 
   &__container--wide {
-    padding: 30px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   &__title {
     margin-bottom: 30px;
   }
-  &__images {
-    gap: 40px;
-    width: 100%;
-    justify-content: center;
+  &__slider {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media (min-width: $tablet) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
-  &__div {
+  &__card {
     width: 100%;
     max-width: 255px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: $white;
     border-radius: 12px;
     padding: 25px 0;
@@ -143,21 +152,36 @@
     }
   }
   &__img {
-    @media (min-width: $tablet) {
-      max-width: 106px;
-    }
+    max-width: 106px;
+
     @media (min-width: $tabletHD) {
       max-width: 159px;
     }
   }
-  &__img-f {
-    @media (min-width: $tablet) {
-      max-width: 53px;
-    }
+  &__img-1 {
+    max-width: 53px;
+
     @media (min-width: $tabletHD) {
       max-width: 80px;
     }
   }
+  &__img-3 {
+    height: 40px;
+
+    @media (min-width: $tabletHD) {
+      height: 60px;
+    }
+  }
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 16px;
+  height: 16px;
+  background-color: $active-color;
+  opacity: 0.2;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  background-color: $active-color;
+  opacity: 1;
 }
 //......................................... about page end .................................................\\
 

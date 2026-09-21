@@ -103,40 +103,59 @@
       <section class="about-fourth">
         <div class="container--wide about-fourth__container--wide">
           <h3 class="about-fourth__title caps center">achievements</h3>
-          <div class="about-fourth__images flex">
-            <div class="about-fourth__div center">
+          <div
+            class="about-fourth__slider owl-carousel owl-theme"
+            id="mySlider-2"
+          >
+            <div class="about-fourth__card">
               <img
-                class="about-fourth__img about-fourth__img-f"
+                class="about-fourth__img about-fourth__img-1"
                 src="./files/images/Achievment-1.png"
                 alt="Achievement"
               />
             </div>
-            <div class="about-fourth__div center">
+            <div class="about-fourth__card">
               <img
                 class="about-fourth__img"
                 src="./files/images/Achievment-2.png"
                 alt="Achievement"
               />
             </div>
-            <div class="about-fourth__div center">
+            <div class="about-fourth__card">
               <img
-                class="about-fourth__img"
+                class="about-fourth__img about-fourth__img-3"
                 src="./files/images/Achievment-3.png"
                 alt="Achievement"
               />
             </div>
-            <div class="about-fourth__div center">
+            <div class="about-fourth__card">
               <img
                 class="about-fourth__img"
                 src="./files/images/Achievment-4.png"
                 alt="Achievement"
               />
             </div>
+            <div class="about-fourth__card">
+              <img
+                class="about-fourth__img about-fourth__img-1"
+                src="./files/images/Achievment-1.png"
+                alt="Achievement"
+              />
+            </div>
+            <div class="about-fourth__card">
+              <img
+                class="about-fourth__img"
+                src="./files/images/Achievment-2.png"
+                alt="Achievement"
+              />
+            </div>
           </div>
-          <div class="about-fourth__slider"></div>
         </div>
       </section>
     </main>
     @@include('html/footer.html', { "showLine": true })
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./files/assets/owlcarousel2/owl.carousel.min.js"></script>
+    <script src="./js/about_page.js"></script>
   </body>
 </html>
