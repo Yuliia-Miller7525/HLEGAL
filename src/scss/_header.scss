@@ -11,9 +11,14 @@
     }
     .header__link {
       color: $active-color;
+      display: block;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      text-align: center;
 
       @media (min-width: $tablet) {
         color: $white;
+        padding-top: 0;
         padding-bottom: 3px;
         border-bottom: 2px solid transparent;
         &:hover {
@@ -45,10 +50,17 @@
     }
     .header__link {
       color: $active-color;
-      padding-bottom: 3px;
-      border-bottom: 2px solid transparent;
-      &:hover {
-        border-bottom: 2px solid $active-color;
+      display: block;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      text-align: center;
+      @media (min-width: $tablet) {
+        padding-top: 0;
+        padding-bottom: 3px;
+        border-bottom: 2px solid transparent;
+        &:hover {
+          border-bottom: 2px solid $active-color;
+        }
       }
     }
     .header__input:hover + .header__span {
@@ -275,8 +287,8 @@
     }
   }
   &__item {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    // padding-top: 7px;
+    // padding-bottom: 7px;
     background-color: $background-color;
     border-radius: 12px;
     transition: all 0.2s linear;
@@ -285,8 +297,8 @@
     }
 
     @media (min-width: $tablet) {
-      padding-top: 0;
-      padding-bottom: 0;
+      // padding-top: 0;
+      // padding-bottom: 0;
       background-color: transparent;
       border-radius: 0;
       &:hover {

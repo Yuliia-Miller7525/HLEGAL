@@ -10,7 +10,11 @@
 
 //......................................... about page start...............................................\\
 .about-first {
-  padding-top: 60px;
+  padding-top: 30px;
+  @media (min-width: $tablet) {
+    padding-top: 60px;
+  }
+
   &__container {
     @media (min-width: $tabletHD) {
       flex-direction: row;
@@ -297,6 +301,18 @@
   #values-consistent:checked ~ .values__content .values__item--consistent {
     display: flex;
   }
+
+  #values-customer:checked ~ .values__content .values__item--customer {
+    display: flex;
+  }
+
+  #values-innovative:checked ~ .values__content .values__item--innovative {
+    display: flex;
+  }
+
+  #values-business:checked ~ .values__content .values__item--business {
+    display: flex;
+  }
   #values-consistent:checked
     ~ .values__tabs
     .values__tab[for="values-consistent"],
@@ -330,7 +346,7 @@
     display: flex !important;
     flex-direction: column;
     background-color: $background-color;
-    border-radius: 0 12px 12px 0;
+    border-radius: 12px;
 
     @media (min-width: $tabletHD) {
       flex-direction: row;
@@ -393,7 +409,7 @@
   }
 }
 .slick-dots {
-  margin: -30px;
+  bottom: -55px;
   li {
     width: 16px;
     height: 16px;
