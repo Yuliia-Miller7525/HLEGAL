@@ -204,9 +204,11 @@
   &__link {
     &:hover svg path {
       stroke: $accent-color;
+      transition: all 0.2s linear;
     }
     &:hover svg circle {
       stroke: $accent-color;
+      transition: all 0.2s linear;
     }
   }
 }

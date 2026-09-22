@@ -1,5 +1,11 @@
 console.log("it works");
 
+$(".header__burger").click(function () {
+  $(this).toggleClass("active");
+  $(".header__menu").toggleClass("active");
+  $("body").toggleClass("no-scroll");
+});
+
 function initFocusFix($slider) {
   function fixSlickFocus() {
     $slider.find(".slick-slide").each(function () {

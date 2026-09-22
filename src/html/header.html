@@ -10,7 +10,7 @@
               name="language"
               value="uk"
             />
-            <span class="header__span">УК</span>
+            <span class="header__span transition">УК</span>
           </label>
           <label class="header__label">
             <input
@@ -19,7 +19,7 @@
               name="language"
               value="sp"
             />
-            <span class="header__span">SP</span>
+            <span class="header__span transition">SP</span>
           </label>
           <label class="header__label">
             <input
@@ -29,7 +29,7 @@
               value="en"
               checked
             />
-            <span class="header__span">EN</span>
+            <span class="header__span transition">EN</span>
           </label>
         </form>
       </div>
@@ -79,7 +79,8 @@
         <h1 class="header__title">@@pageTitle</h1>
         }
       </div>
-      <div class="header__burger flex column">
+      <div class="header__burger relative">
+        <span class="header__line"></span>
         <span class="header__line"></span>
         <span class="header__line"></span>
         <span class="header__line"></span>
@@ -87,23 +88,29 @@
     </div>
     <div class="header__menu">
       <nav class="header__nav">
-        <ul class="header__list flex row">
+        <ul class="header__list flex column">
           <li class="header__item">
-            <a class="header__link" href="../about_page.html">about us</a>
+            <a class="header__link transition" href="../about_page.html"
+              >about us</a
+            >
           </li>
           <li class="header__item">
-            <a class="header__link" href="../services_page.html">services</a>
+            <a class="header__link transition" href="../services_page.html"
+              >services</a
+            >
           </li>
           <li class="header__item">
-            <a class="header__link" href="../team_page.html">team</a>
+            <a class="header__link transition" href="../team_page.html">team</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="../publications_page.html"
+            <a class="header__link transition" href="../publications_page.html"
               >publications</a
             >
           </li>
           <li class="header__item">
-            <a class="header__link" href="../contact_page.html">contact</a>
+            <a class="header__link transition" href="../contact_page.html"
+              >contact</a
+            >
           </li>
         </ul>
       </nav>
