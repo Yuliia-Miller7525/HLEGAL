@@ -7,9 +7,119 @@
     <main>
       <section class="services-entry_top gradient relative">
         <span class="services-entry_top__span"></span>
-        <div class="container services-entry_top__container"></div>
+        <div class="container services-entry_top__container flex column gap">
+          <div class="services-entry_top__consultation flex column">
+            <div class="services-entry_top__img">
+              <img
+                class="services-entry_top__icon"
+                src="../files/images/Ecommerce.svg"
+                alt="icon"
+              />
+            </div>
+            <h2 class="services-entry_top__title text-gradient center">
+              IT and e-commerce
+            </h2>
+            <div class="services-entry_top__text flex column center">
+              <p class="services-entry_top__description">
+                An endless stream of contracts, tax issues, labor relations,
+                corporate papers - legal work distracts you from doing business.
+                But there is not much work to do to hire an in-house lawyer.
+              </p>
+              <p class="services-entry_top__description">
+                In addition, over time, the work will become the same type and
+                uninteresting for a full-time lawyer. And we know very well how
+                difficult it is to find a good candidate with experience in the
+                field of information technology in Ukraine.
+              </p>
+            </div>
+            <button
+              class="services-entry_top__button btn center"
+              type="submit"
+              id="openModal"
+            >
+              Free consultation
+            </button>
+          </div>
+          <div class="services-entry_top__checklist flex column gap">
+            <h3 class="services-entry_top__list-title">
+              Services in this area:
+            </h3>
+            <ul class="services-entry_top__list">
+              <li class="services-entry_top__item">
+                support of investment projects for the development of port
+                infrastructure;
+              </li>
+              <li class="services-entry_top__item">
+                certification of GTS, entering information about them in
+                mandatory databases and registers;
+              </li>
+              <li class="services-entry_top__item">
+                registration of permits for the construction of port terminals;
+              </li>
+              <li class="services-entry_top__item">
+                registration of permit and other mandatory documentation
+                required for carrying out activities in the port (emission
+                permit, conclusion on EIA, RTC, etc.);
+              </li>
+              <li class="services-entry_top__item">
+                support of procedures related to the lease of state property in
+                the port;
+              </li>
+              <li class="services-entry_top__item">
+                support of procedures related to confirmation of the status of
+                port operator, maritime agent, foreign sailing line;
+              </li>
+              <li class="services-entry_top__item">
+                support of procedures related to the inclusion of the company
+                within the port;
+              </li>
+              <li class="services-entry_top__item">
+                appeals against actions related to the illegal imposition of
+                services in the port by monopoly companies.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="services-entry_bottom">
+        @@include('html/publications.html', { "pageTitle": "Recommended" })
       </section>
     </main>
     @@include('html/footer.html', { "showLine": true })
+
+    <div class="modal">
+      <div class="modal__window relative flex column gap">
+        <span class="modal__close absolute">&times;</span>
+        <h2 class="modal__title text-gradient">We would like to help you</h2>
+        <form class="modal__form modal__form--name flex column">
+          <input class="modal__input focus" type="text" placeholder="Name" />
+          <input
+            class="modal__input modal__input--message focus"
+            type="text"
+            placeholder="Message"
+          />
+        </form>
+        <div class="modal__contact flex column">
+          <h3 class="modal__contact-title caps">How to answer you?</h3>
+          <form class="modal__form modal__form--contact flex column">
+            <input
+              class="modal__input focus"
+              type="tel"
+              placeholder="Phone number"
+            />
+            <input
+              class="modal__input focus"
+              type="email"
+              placeholder="Email"
+            />
+          </form>
+        </div>
+        <button class="modal__button btn" type="submit">Send message</button>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./files/assets/slick/slick.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

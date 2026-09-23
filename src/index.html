@@ -288,29 +288,6 @@
     </main>
     @@include('html/footer.html', { "showLine": true })
 
-    <div class="modal">
-      <div class="modal__window relative flex column gap">
-        <span class="modal__close absolute">&times;</span>
-        <h2 class="modal__title text-gradient">We would like to help you</h2>
-        <form class="modal__form modal__form--name flex column">
-          <input class="modal__input" type="text" placeholder="Name" />
-          <input
-            class="modal__input modal__input--message"
-            type="text"
-            placeholder="Message"
-          />
-        </form>
-        <div class="modal__contact flex column">
-          <h3 class="modal__contact-title caps">How to answer you?</h3>
-          <form class="modal__form modal__form--contact flex column">
-            <input class="modal__input" type="tel" placeholder="Phone number" />
-            <input class="modal__input" type="email" placeholder="Email" />
-          </form>
-        </div>
-        <button class="modal__button" type="submit">Send message</button>
-      </div>
-    </div>
-
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./files/assets/slick/slick.js"></script>
     <script src="./js/script.js"></script>

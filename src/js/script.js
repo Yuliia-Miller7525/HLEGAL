@@ -6,6 +6,15 @@ $(".header__burger").click(function () {
   $("body").toggleClass("no-scroll");
 });
 
+$("#openModal").click(() => {
+  $(".modal").addClass("active");
+});
+$(".modal__close, .modal").click(function (event) {
+  if (event.target === this) {
+    $(".modal").removeClass("active");
+  }
+});
+
 function initFocusFix($slider) {
   function fixSlickFocus() {
     $slider.find(".slick-slide").each(function () {

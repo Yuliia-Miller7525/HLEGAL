@@ -463,8 +463,10 @@
 .services-entry_top {
   &__container {
     padding-top: 30px;
+    padding-bottom: 60px;
     @media (min-width: $tablet) {
       padding-top: 60px;
+      gap: 60px;
     }
   }
   &__span {
@@ -477,6 +479,65 @@
       height: 116px;
     }
   }
+  &__consultation {
+    gap: 28px;
+  }
+  &__title {
+    @media (min-width: $tablet) {
+      font-size: 38px;
+    }
+  }
+  &__text {
+    gap: 20px;
+  }
+  &__img {
+    width: 100px;
+    max-width: 92px;
+    border-radius: 24px;
+    background-color: $white;
+    align-self: center;
+  }
+  &__icon {
+    padding: 14px;
+  }
+  &__description {
+    @include font-props(400, 19px, 30px, 0%);
+    color: $white;
+  }
+  &__button {
+    max-width: 208px;
+    align-self: center;
+  }
+  &__checklist {
+    border-top: 4px solid #ffffff80;
+    padding-top: 30px;
+  }
+  &__list-title {
+    color: $white;
+  }
+  &__list {
+    padding-left: 15px;
+
+    @media (min-width: $tablet) {
+      column-count: 2;
+      column-gap: 60px;
+    }
+  }
+  &__item {
+    @include font-props(400, 18px, 26px, 0%);
+    color: $white;
+    margin-top: 15px;
+
+    &:last-child {
+      margin-top: 0;
+    }
+    &::marker {
+      color: $accent-color;
+    }
+  }
+}
+.services-entry_bottom {
+  margin-top: 60px;
 }
 //......................................... service-entry page end ....................................\\
 
@@ -491,6 +552,10 @@
   padding: 1rem;
   box-shadow: 0px 15px 80px 0px #28285680;
 
+  &.active {
+    display: flex;
+  }
+
   &__window {
     width: 100%;
     max-width: 375px;
@@ -498,7 +563,7 @@
     border-radius: 12px;
     padding: 30px;
 
-    @media (min-width: $decktop) {
+    @media (min-width: $tablet) {
       max-width: 650px;
     }
   }
@@ -507,7 +572,7 @@
     max-width: 260px;
     padding: 2px 0;
 
-    @media (min-width: $decktop) {
+    @media (min-width: $tablet) {
       max-width: 517px;
       font-size: 38px;
     }
@@ -522,41 +587,13 @@
   &__form {
     gap: 15px;
   }
-  &__input {
-    padding: 15px 0 15px 15px;
-    border-radius: 8px;
-    border: transparent;
-    background-color: $white;
-
-    &::placeholder {
-      @include font-props(400, 16px, 26px, 0%);
-      color: $text-color;
-    }
-  }
   &__input--message {
     padding: 15px 0 89px 15px;
-    border-radius: 8px;
-    border: transparent;
-    background-color: $white;
-
-    &::placeholder {
-      @include font-props(400, 16px, 26px, 0%);
-      color: $text-color;
-    }
   }
   &__contact {
     gap: 15px;
   }
   &__contact-title {
     color: $text-color;
-  }
-  &__button {
-    padding: 18px 96px;
-    border-radius: 12px;
-    border: transparent;
-    color: $white;
-    background-color: $active-color;
-    box-shadow: 0px 0px 20px 0px #24a3ff80;
-    @include font-props(700, 16px, 100%, 0%);
   }
 }
