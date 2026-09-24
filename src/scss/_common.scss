@@ -107,6 +107,10 @@ p {
 .p_small {
   @include font-props(400, 14px, 22px, 0%);
 }
+.link-font {
+  @include font-props(400, 21px, 30px, 0%);
+  color: $main-color;
+}
 .text-gradient {
   background: $gradient-text;
   color: transparent;

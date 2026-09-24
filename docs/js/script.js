@@ -8,10 +8,12 @@ $(".header__burger").click(function () {
 
 $("#openModal").click(() => {
   $(".modal").addClass("active");
+  $("body").addClass("no-scroll");
 });
 $(".modal__close, .modal").click(function (event) {
   if (event.target === this) {
     $(".modal").removeClass("active");
+    $("body").removeClass("no-scroll");
   }
 });
 

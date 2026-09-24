@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include('html/head.html', { "title": "Contact" })
+  </head>
+  <body>
+    @@include('html/header.html', { "pageTitle": "contact", "headerClass": "",
+    "logoSrc": "Logo-dark.svg", "theme": "header--light" })
+    <main class="contact">
+      <section class="container contact__container flex column gap">
+        <div class="contact__information flex column gap">
+          <a
+            class="contact__link-adress flex column link-font"
+            href="https://maps.app.goo.gl/psoKaaZjyEBUAwzV9"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Kyiv, <span class="contact__span">Mechnikova str, 14</span>
+          </a>
+          <div class="contact__contacts flex column">
+            <a class="contact__link-tel link-font" href="tel:+380800211927"
+              >0800 211 927</a
+            >
+            <a
+              class="contact__link-email link-font hover transition"
+              href="mailto:contact@forstudy.space"
+              >contact@forstudy.space</a
+            >
+          </div>
+          <a
+            class="contact__link-fb flex row"
+            href="https://www.facebook.com/"
+            target="blank"
+            rel="noreferrer noopener"
+          >
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="transition"
+                d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"
+                fill="#24A3FF"
+              />
+            </svg>
+            <p class="contact__txt flex column uppercase transition">
+              Our page <span class="contact__span">on facebook</span>
+            </p>
+          </a>
+        </div>
+        <div class="contact__modal flex column gap">
+          <h2 class="contact__modal-title text-gradient">
+            We would like to help you
+          </h2>
+          <form class="contact__modal-form flex column">
+            <input
+              class="contact__modal-input focus"
+              type="text"
+              placeholder="Name"
+            />
+            <input
+              class="contact__modal-input contact__modal-input--message focus"
+              type="text"
+              placeholder="Message"
+            />
+            <h3 class="contact__modal-contact-title caps">
+              How to answer you?
+            </h3>
+            <input
+              class="contact__modal-input focus"
+              type="tel"
+              placeholder="Phone number"
+            />
+            <input
+              class="contact__modal-input focus"
+              type="email"
+              placeholder="Email"
+            /><button class="contact__modal-button btn" type="submit">
+              Send message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', { "showLine": false })
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./files/assets/slick/slick.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@
     .header__link-tel,
     .header__span,
     .header__title,
-    .header__paragraph-address {
+    .header__link-adress {
       color: $white;
     }
     .header__link {
@@ -35,7 +35,7 @@
   }
 
   &--light {
-    .header__paragraph-address,
+    .header__link-adress,
     .header__link-tel {
       color: $text-color;
     }
@@ -346,9 +346,9 @@
       transition: all 0.2s linear;
     }
   }
-  &__paragraph-address {
+  &__link-adress {
     display: none;
-    line-height: 100%;
+    @include font-props(400, 16px, 100%, 0%);
 
     @media (min-width: $tablet) {
       display: block;

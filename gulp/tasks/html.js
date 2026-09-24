@@ -12,12 +12,12 @@ export const html = () => {
     .pipe(replace("../services_page.html", "./services_page.html"))
     .pipe(replace("../service-entry_page.html", "./service-entry_page.html"))
     .pipe(replace("../team_page.html", "./team_page.html"))
-    .pipe(replace("../team-entry_page.html", "./team-entry_page.html"))
+    .pipe(replace("../team_entry_page.html", "./team_entry_page.html"))
     .pipe(replace("../publications_page.html", "./publications_page.html"))
     .pipe(
       replace(
-        "../publication-entry_page.html",
-        "./publication-entry_page.html",
+        "../publication_entry_page.html",
+        "./publication_entry_page.html",
       ),
     )
     .pipe(replace("../contact_page.html", "./contact_page.html"))

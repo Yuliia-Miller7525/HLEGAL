@@ -35,7 +35,7 @@
   }
   &__stats {
     gap: 40px;
-    border-left: 4px solid $separator-color;
+    border-left: $border-line;
     padding-left: 30px;
     width: 100%;
     height: fit-content;
@@ -539,8 +539,6 @@
 .services-entry_bottom {
   margin-top: 60px;
 }
-//......................................... service-entry page end ....................................\\
-
 .modal {
   display: none;
   position: fixed;
@@ -590,10 +588,98 @@
   &__input--message {
     padding: 15px 0 89px 15px;
   }
-  &__contact {
-    gap: 15px;
-  }
   &__contact-title {
     color: $text-color;
+    margin-top: 15px;
+  }
+  &__button {
+    margin-top: 15px;
   }
 }
+//......................................... service-entry page end ....................................\\
+
+//......................................... contact_page start ........................................\\
+.contact {
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media (min-width: $tablet) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      gap: 60px;
+    }
+    @media (min-width: $tabletHD) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__information {
+    @media (min-width: $tabletHD) {
+      flex-grow: 1;
+    }
+  }
+  &__contacts {
+    gap: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: $border-line;
+    border-bottom: $border-line;
+  }
+  &__link-fb {
+    &:hover svg path,
+    &:hover.contact__txt {
+      fill: $accent-color;
+    }
+    &:hover p {
+      color: $accent-color;
+    }
+  }
+  &__link-fb {
+    gap: 10px;
+    align-items: center;
+  }
+  &__txt {
+    @include font-props(700, 12px, 16px, 1px);
+    color: $active-color;
+  }
+  &__modal {
+    width: 100%;
+    max-width: 650px;
+    background-color: $background-color;
+    border-radius: 12px;
+    padding: 30px;
+    flex-grow: 1;
+
+    @media (min-width: $tabletHD) {
+      max-width: 422px;
+    }
+    @media (min-width: $decktop) {
+      max-width: 510px;
+    }
+    @media (min-width: $decktopHD) {
+      max-width: 650px;
+    }
+  }
+  &__modal-title {
+    width: 100%;
+    padding: 2px 0;
+  }
+  &__modal-form {
+    gap: 15px;
+  }
+  &__modal-input--message {
+    padding: 15px 0 89px 15px;
+  }
+  &__modal-contact {
+    gap: 15px;
+  }
+  &__modal-contact-title {
+    color: $text-color;
+    margin-top: 15px;
+  }
+  &__modal-button {
+    margin-top: 15px;
+  }
+}
+//......................................... contact_page end ..........................................\\
