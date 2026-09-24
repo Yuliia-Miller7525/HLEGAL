@@ -390,6 +390,9 @@
   &__item {
     align-items: center;
   }
+  &__item svg {
+    transform: translateY(1px);
+  }
   &__paragraph {
     padding: 2px 0;
     @media (min-width: $tablet) {
@@ -541,6 +544,7 @@
 }
 .modal {
   display: none;
+  min-height: 100vh;
   position: fixed;
   z-index: 10;
   inset: 0;
